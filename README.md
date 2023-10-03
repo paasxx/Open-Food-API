@@ -36,6 +36,8 @@ cd djangoproject
 
 3. Execute o Docker Compose para construir e iniciar o contâiner:
 
+   Docker: version 24.0.5
+
 ```bash
 docker-compose up --build
 ```
