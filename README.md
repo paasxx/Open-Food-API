@@ -25,7 +25,7 @@ Siga os passos abaixo para configurar e executar o projeto usando o Docker Compo
 1. Clone este repositório em sua máquina local:
 
 ```bash
-git clone https://lab.coodesh.com/paasxx/python-challenge-20200205.git
+git clone https://github.com/paasxx/Open-Food-API.git
 ```
 
 2. Navegue até o diretório do projeto:
