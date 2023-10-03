@@ -25,7 +25,7 @@ Siga os passos abaixo para configurar e executar o projeto usando o Docker Compo
 1. Clone este repositório em sua máquina local:
 
 ```bash
-git clone https://github.com/paasxx/Open-Food-API.git
+git clone https://lab.coodesh.com/paasxx/python-challenge-20200205.git
 ```
 
 2. Navegue até o diretório do projeto:
@@ -34,13 +34,44 @@ git clone https://github.com/paasxx/Open-Food-API.git
 cd djangoproject
 ```
 
-3. Execute o Docker Compose para construir e iniciar o contâiner:
-
-   Docker: version 24.0.5
+3. Execute o Docker Compose (Docker: version 24.0.5) para construir e iniciar o contâiner:
 
 ```bash
 docker-compose up --build
 ```
+
+4. O script cria um usuário automático com os seguintes dados para obter o token de autenticação da API:
+
+```json
+Super User: {
+    "username": "admin",
+    "password": "adminpass"
+}
+
+```
+
+5. Para obter o token, vá em `http://localhost:8000/api/token` usando o Postman com o seguinte corpo para o POST:
+
+```json
+{
+    "username": "admin",
+    "password": "adminpass"
+}
+
+```
+
+6. Com o token obtido na response acima, utilizamos API Key para autenticação de todos os endpoints, no Postman em Auth.
+
+
+```json
+Example: {
+    "Key": "Authorization",
+    "Value": "Token ddeeb8b9966e53de79e7519d2cfb4aef9cde87a4"
+}
+
+
+```
+
 
 A API estará acessível em `http://localhost:8000/api`.
 
@@ -54,6 +85,8 @@ A API estará acessível em `http://localhost:8000/api`.
 | GET      | /products/:code             | Recupera informações detalhadas de um produto  |
 | GET      | /products                   | Lista todos os produtos                        |
 | POST     | /products/create            | Adiciona um novo produto ao banco de dados     |
+| POST     | /token                      | Obtém o Token de autorização                   |
+| POST     | /schema/docs                | Documentação da API                 |
 
 
 ### Parâmetros de entrada para Endpoints da API
