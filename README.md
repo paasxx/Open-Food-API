@@ -80,11 +80,11 @@ A API estará acessível em `http://localhost:8000/api`.
 | Método   | Endpoint                    | Descrição                                      |
 |----------|-----------------------------|------------------------------------------------|
 | GET      | /                           | Detalhes da API                                |
-| PUT      | /products/:code             | Atualiza informações do projeto Web            |
-| DELETE   | /products/:code             | Altera o status do produto para "excluído"     |
-| GET      | /products/:code             | Recupera informações detalhadas de um produto  |
+| PUT      | /product/:code             | Atualiza informações do projeto Web            |
+| DELETE   | /product/:code             | Altera o status do produto para "excluído"     |
+| GET      | /product/:code             | Recupera informações detalhadas de um produto  |
 | GET      | /products                   | Lista todos os produtos                        |
-| POST     | /products/create            | Adiciona um novo produto ao banco de dados     |
+| POST     | /product/create            | Adiciona um novo produto ao banco de dados     |
 | POST     | /token                      | Obtém o Token de autorização                   |
 | POST     | /schema/docs                | Documentação da API                 |
 
